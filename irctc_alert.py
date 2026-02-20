@@ -1,8 +1,9 @@
 import requests
+import os
 from datetime import datetime, timedelta
 
-BOT_TOKEN = "YOUR_BOT_TOKEN"
-CHAT_ID = "YOUR_CHAT_ID"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
 
 today = datetime.utcnow()
 travel_date = today + timedelta(days=60)
@@ -11,7 +12,7 @@ message = f"""
 🚆 IRCTC BOOKING ALERT 🚆
 
 Today: {today.strftime('%d %B %Y')}
-Booking Open For Travel Date:
+Booking Open For:
 {travel_date.strftime('%d %B %Y')}
 """
 
