@@ -17,8 +17,8 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install requests
-        run: pip install requests
+      - name: Install dependencies
+        run: pip install requests holidays
 
       - name: Run script
         run: python irctc_alert.py
