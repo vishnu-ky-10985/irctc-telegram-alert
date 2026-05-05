@@ -2,7 +2,7 @@ name: IRCTC Alert
 
 on:
   schedule:
-    - cron: '15 2 * * *'
+    - cron: '0 1,2,3 * * *'
   workflow_dispatch:
 
 jobs:
